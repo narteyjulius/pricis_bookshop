@@ -1,0 +1,723 @@
+{% extends "Base.html" %}
+<!-- {% block head_title %} Luk-Blog | Home {% endblock head_title %} -->
+{% block content %}
+
+<section id="page-title" class="page-title">
+  <div class="container">
+    <h1>Bookstore</h1>
+
+    <nav class="woocommerce-breadcrumb">
+      <a href="https://demo.tokopress.com/bookie">Home</a
+      >&nbsp;&#47;&nbsp;Bookstore
+    </nav>
+  </div>
+</section>
+
+<div class="books-search">
+  <div class="container">
+    <form class="" method="get" action="https://demo.tokopress.com/bookie/">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <input
+              name="s"
+              value=""
+              type="text"
+              class="form-control"
+              id="keyword"
+              placeholder="Book Title"
+            />
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <select name="product_cat" id="product_cat" class="form-control">
+              <option value="0">Book Category</option>
+              <option class="level-0" value="drama">Drama</option>
+              <option class="level-1" value="inspiration">
+                &nbsp;&nbsp;&nbsp;Inspiration
+              </option>
+              <option class="level-1" value="love-story">
+                &nbsp;&nbsp;&nbsp;Love Story
+              </option>
+              <option class="level-0" value="life-style">Life Style</option>
+              <option class="level-1" value="business">
+                &nbsp;&nbsp;&nbsp;Business
+              </option>
+              <option class="level-1" value="culture">
+                &nbsp;&nbsp;&nbsp;Culture
+              </option>
+              <option class="level-0" value="science">Science</option>
+            </select>
+            <i class="select-arrow fa fa-angle-down"></i>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <select name="book_author" id="book_author" class="form-control">
+              <option value="0">Book Author</option>
+              <option class="level-0" value="atkia">Atkia</option>
+              <option class="level-0" value="brian-owell">
+                Brian O&#8217;Well
+              </option>
+              <option class="level-0" value="saifudin-a">Saifudin A.</option>
+              <option class="level-0" value="sarfaraz">Sarfaraz</option>
+            </select>
+            <i class="select-arrow fa fa-angle-down"></i>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <input type="hidden" name="post_type" value="product" />
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa fa-search"></i> &nbsp; Find Book
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="main-content-container container">
+  <div class="row">
+    <div class="col-md-9">
+      <div id="content" class="main-content-inner" role="main">
+        <div class="woocommerce-notices-wrapper"></div>
+        <ul class="products columns-3">
+          {% for book in books %}
+
+          <li
+            class="product type-product post-96 status-publish instock product_cat-business product_cat-life-style product_tag-dream product_tag-money has-post-thumbnail downloadable shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="{{ book.get_absolute_url }}"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  {% if book.cover %}
+                  <img
+                    width="250"
+                    height="333"
+                    src="{{ book.cover.url }}"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  {% endif %}
+                </figure>
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">
+                    {{ book.title }}
+                  </h2>
+                  <span class="person-name vcard">{{ book.author }}</span>
+                  <span class="price"
+                    ><del aria-hidden="true"
+                      ><span class="woocommerce-Price-amount amount"
+                        ><bdi
+                          ><span class="woocommerce-Price-currencySymbol"
+                            >&#36;</span
+                          >{{ book.old_price }}</bdi
+                        ></span
+                      ></del
+                    >
+                    <ins
+                      ><span class="woocommerce-Price-amount amount"
+                        ><bdi
+                          ><span class="woocommerce-Price-currencySymbol"
+                            >&#36;</span
+                          >{{ book.price }}
+                        </bdi></span
+                      ></ins
+                    ></span
+                  >
+                </div>
+              </a>
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="{{ book.get_absolute_url }}"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="?add-to-cart=96"
+                    data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                    data-product_id="96"
+                    data-product_sku=""
+                    aria-label="Add &ldquo;See Me&rdquo; to your cart"
+                    rel="nofollow"
+                    >Buy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <nav class="paging-navigation">
+          <h4 class="sr-only">Post navigation</h4>
+          <ul class="pagination">
+            <li class="pagination-list active">
+              <span class="page-numbers current">1</span>
+            </li>
+            <li class="pagination-list">
+              <a
+                class="page-numbers"
+                href="https://demo.tokopress.com/bookie/book/page/2/"
+                >2</a
+              >
+            </li>
+            <li class="pagination-next">
+              <a
+                class="next page-numbers"
+                href="https://demo.tokopress.com/bookie/book/page/2/"
+                ><i class="fa fa-chevron-right"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <aside id="sidebar" class="sidebar sidebar-shop">
+        <!-- <section
+          id="woocommerce_price_filter-1"
+          class="widget woocommerce widget_price_filter"
+        >
+          <div class="widget-wrap widget-inside">
+            <h3 class="widget-title">Filter by price</h3>
+            <form method="get" action="https://demo.tokopress.com/bookie/book/">
+              <div class="price_slider_wrapper">
+                <div class="price_slider" style="display: none"></div>
+                <div class="price_slider_amount" data-step="10">
+                  <input
+                    type="text"
+                    id="min_price"
+                    name="min_price"
+                    value="0"
+                    data-min="0"
+                    placeholder="Min price"
+                  />
+                  <input
+                    type="text"
+                    id="max_price"
+                    name="max_price"
+                    value="40"
+                    data-max="40"
+                    placeholder="Max price"
+                  />
+                  <button type="submit" class="button">Filter</button>
+                  <div class="price_label" style="display: none">
+                    Price: <span class="from"></span> &mdash;
+                    <span class="to"></span>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section> -->
+        <!-- <section
+          id="woocommerce_top_rated_products-2"
+          class="widget woocommerce widget_top_rated_products"
+        >
+          <div class="widget-wrap widget-inside">
+            <h3 class="widget-title">Top Rated Products</h3>
+            <ul class="product_list_widget">
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/furiously-happy-a-funny-book-about-horrible-things/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title">See Me</span>
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 5.00 out of 5"
+                >
+                  <span style="width: 100%"
+                    >Rated <strong class="rating">5.00</strong> out of 5</span
+                  >
+                </div>
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                    >9.00</bdi
+                  ></span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/the-glassblower/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-04-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-04-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-04-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-04-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-04.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title">The Glassblower</span>
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 5.00 out of 5"
+                >
+                  <span style="width: 100%"
+                    >Rated <strong class="rating">5.00</strong> out of 5</span
+                  >
+                </div>
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                    >20.00</bdi
+                  ></span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/this-is-spider-man/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-06-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-06-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-06-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-06-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-06.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title">This is Spider-Man</span>
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 5.00 out of 5"
+                >
+                  <span style="width: 100%"
+                    >Rated <strong class="rating">5.00</strong> out of 5</span
+                  >
+                </div>
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                    >18.00</bdi
+                  ></span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/the-dead-compendium-volume-3/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title"
+                    >The Dead Compendium Volume 3</span
+                  >
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 5.00 out of 5"
+                >
+                  <span style="width: 100%"
+                    >Rated <strong class="rating">5.00</strong> out of 5</span
+                  >
+                </div>
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                    >3.00</bdi
+                  ></span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/american-assassin-thriller/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-09-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-09-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-09-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-09-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-09.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title">American Assassin Thriller</span>
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 4.67 out of 5"
+                >
+                  <span style="width: 93.4%"
+                    >Rated <strong class="rating">4.67</strong> out of 5</span
+                  >
+                </div>
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                    >35.00</bdi
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+        </section> -->
+        <section
+          id="woocommerce_product_categories-1"
+          class="widget woocommerce widget_product_categories"
+        >
+          <div class="widget-wrap widget-inside">
+            <h3 class="widget-title">Product Categories</h3>
+            <ul class="product-categories">
+              <li class="cat-item cat-item-29 cat-parent">
+                <a
+                  href="https://demo.tokopress.com/bookie/product-category/drama/"
+                  >Drama</a
+                >
+                <ul class="children">
+                  <li class="cat-item cat-item-33">
+                    <a
+                      href="https://demo.tokopress.com/bookie/product-category/drama/inspiration/"
+                      >Inspiration</a
+                    >
+                  </li>
+                  <li class="cat-item cat-item-35">
+                    <a
+                      href="https://demo.tokopress.com/bookie/product-category/drama/love-story/"
+                      >Love Story</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="cat-item cat-item-34 cat-parent">
+                <a
+                  href="https://demo.tokopress.com/bookie/product-category/life-style/"
+                  >Life Style</a
+                >
+                <ul class="children">
+                  <li class="cat-item cat-item-45">
+                    <a
+                      href="https://demo.tokopress.com/bookie/product-category/life-style/business/"
+                      >Business</a
+                    >
+                  </li>
+                  <li class="cat-item cat-item-46">
+                    <a
+                      href="https://demo.tokopress.com/bookie/product-category/life-style/culture/"
+                      >Culture</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="cat-item cat-item-41">
+                <a
+                  href="https://demo.tokopress.com/bookie/product-category/science/"
+                  >Science</a
+                >
+              </li>
+              <li class="cat-item cat-item-15">
+                <a
+                  href="https://demo.tokopress.com/bookie/product-category/uncategorized/"
+                  >Uncategorized</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          id="woocommerce_products-2"
+          class="widget woocommerce widget_products"
+        >
+          <div class="widget-wrap widget-inside">
+            <h3 class="widget-title">New Products</h3>
+            <ul class="product_list_widget">
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/lyrics-of-the-lalala-musical/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title"
+                    >Lyrics of the Lalala Musical</span
+                  >
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 4.50 out of 5"
+                >
+                  <span style="width: 90%"
+                    >Rated <strong class="rating">4.50</strong> out of 5</span
+                  >
+                </div>
+                <del aria-hidden="true"
+                  ><span class="woocommerce-Price-amount amount"
+                    ><bdi
+                      ><span class="woocommerce-Price-currencySymbol"
+                        >&#36;</span
+                      >3.00</bdi
+                    ></span
+                  ></del
+                >
+                <ins
+                  ><span class="woocommerce-Price-amount amount"
+                    ><bdi
+                      ><span class="woocommerce-Price-currencySymbol"
+                        >&#36;</span
+                      >2.00</bdi
+                    ></span
+                  ></ins
+                >
+              </li>
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/furiously-happy-a-funny-book-about-horrible-things/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title">See Me</span>
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 5.00 out of 5"
+                >
+                  <span style="width: 100%"
+                    >Rated <strong class="rating">5.00</strong> out of 5</span
+                  >
+                </div>
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                    >9.00</bdi
+                  ></span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/the-dead-compendium-volume-3/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title"
+                    >The Dead Compendium Volume 3</span
+                  >
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 5.00 out of 5"
+                >
+                  <span style="width: 100%"
+                    >Rated <strong class="rating">5.00</strong> out of 5</span
+                  >
+                </div>
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                    >3.00</bdi
+                  ></span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/big-magic-beyond-fear/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title">Big Magic Beyond Fear</span>
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 4.00 out of 5"
+                >
+                  <span style="width: 80%"
+                    >Rated <strong class="rating">4.00</strong> out of 5</span
+                  >
+                </div>
+                <del aria-hidden="true"
+                  ><span class="woocommerce-Price-amount amount"
+                    ><bdi
+                      ><span class="woocommerce-Price-currencySymbol"
+                        >&#36;</span
+                      >9.00</bdi
+                    ></span
+                  ></del
+                >
+                <ins
+                  ><span class="woocommerce-Price-amount amount"
+                    ><bdi
+                      ><span class="woocommerce-Price-currencySymbol"
+                        >&#36;</span
+                      >7.00</bdi
+                    ></span
+                  ></ins
+                >
+              </li>
+              <li>
+                <a
+                  href="https://demo.tokopress.com/bookie/product/kill-shot-assassin-thriller/"
+                >
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                  <span class="product-title">Kill Shot Assassin Thriller</span>
+                </a>
+
+                <div
+                  class="star-rating"
+                  role="img"
+                  aria-label="Rated 4.50 out of 5"
+                >
+                  <span style="width: 90%"
+                    >Rated <strong class="rating">4.50</strong> out of 5</span
+                  >
+                </div>
+                <span class="woocommerce-Price-amount amount"
+                  ><bdi
+                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                    >9.00</bdi
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
