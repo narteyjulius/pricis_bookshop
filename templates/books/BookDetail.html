@@ -1,531 +1,526 @@
-{% extends "Base.html" %} {% block content %}
+{% extends "Base.html" %} 
 
-<div class="site-wrap">
-  <section id="page-title" class="page-title">
-    <div class="container">
-      <h2>Bookstore</h2>
+{% block content %}
 
-      <nav class="woocommerce-breadcrumb">
-        <a href="https://demo.tokopress.com/bookie">Home</a>&nbsp;&#47;&nbsp;<a
-          href="https://demo.tokopress.com/bookie/product-category/life-style/"
-          >Life Style</a
-        >&nbsp;&#47;&nbsp;<a
-          href="https://demo.tokopress.com/bookie/product-category/life-style/culture/"
-          >Culture</a
-        >&nbsp;&#47;&nbsp;Lyrics of the Lalala Musical
-      </nav>
-    </div>
-  </section>
+<!-- <div class="site-wrap"> -->
+<section id="page-title" class="page-title">
+  <div class="container">
+    <h2>Bookstore</h2>
 
-  <div class="books-search">
-    <div class="container">
-      <form class="" method="get" action="https://demo.tokopress.com/bookie/">
-        <div class="row">
-          <div class="col-sm-6 col-md-3">
-            <div class="form-group">
+    <nav class="woocommerce-breadcrumb">
+      <a href="https://demo.tokopress.com/bookie">Home</a>&nbsp;&#47;&nbsp;<a
+        href="https://demo.tokopress.com/bookie/product-category/life-style/"
+        >Life Style</a
+      >&nbsp;&#47;&nbsp;<a
+        href="https://demo.tokopress.com/bookie/product-category/life-style/culture/"
+        >Culture</a
+      >&nbsp;&#47;&nbsp;Lyrics of the Lalala Musical
+    </nav>
+  </div>
+</section>
+
+<div class="books-search">
+  <div class="container">
+    <form class="" method="get" action="https://demo.tokopress.com/bookie/">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <input
+              name="s"
+              value=""
+              type="text"
+              class="form-control"
+              id="keyword"
+              placeholder="Book Title"
+            />
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <select name="product_cat" id="product_cat" class="form-control">
+              <option value="0">Book Category</option>
+              <option class="level-0" value="drama">Drama</option>
+              <option class="level-1" value="inspiration">
+                &nbsp;&nbsp;&nbsp;Inspiration
+              </option>
+              <option class="level-1" value="love-story">
+                &nbsp;&nbsp;&nbsp;Love Story
+              </option>
+              <option class="level-0" value="life-style">Life Style</option>
+              <option class="level-1" value="business">
+                &nbsp;&nbsp;&nbsp;Business
+              </option>
+              <option class="level-1" value="culture">
+                &nbsp;&nbsp;&nbsp;Culture
+              </option>
+              <option class="level-0" value="science">Science</option>
+            </select>
+            <i class="select-arrow fa fa-angle-down"></i>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <select name="book_author" id="book_author" class="form-control">
+              <option value="0">Book Author</option>
+              <option class="level-0" value="atkia">Atkia</option>
+              <option class="level-0" value="brian-owell">
+                Brian O&#8217;Well
+              </option>
+              <option class="level-0" value="saifudin-a">Saifudin A.</option>
+              <option class="level-0" value="sarfaraz">Sarfaraz</option>
+            </select>
+            <i class="select-arrow fa fa-angle-down"></i>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+            <input type="hidden" name="post_type" value="product" />
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa fa-search"></i> &nbsp; Find Book
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="main-content-container container">
+  <div id="content" class="main-content-inner" role="main">
+    <div class="woocommerce-notices-wrapper"></div>
+    <div
+      id="product-99"
+      class="product type-product post-99 status-publish first instock product_cat-culture product_cat-life-style product_tag-dream product_tag-music product_tag-sound has-post-thumbnail sale featured shipping-taxable purchasable product-type-simple"
+    >
+      <span class="onsale">Sale!</span>
+      <div
+        class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
+        data-columns="4"
+        style="opacity: 0; transition: opacity 0.25s ease-in-out"
+      >
+        <figure class="woocommerce-product-gallery__wrapper">
+          <div
+            data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-100x100.jpg"
+            data-thumb-alt=""
+            class="woocommerce-product-gallery__image"
+          >
+            <a
+              href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg"
+              ><img
+                width="416"
+                height="555"
+                src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-600x800.jpg"
+                class="wp-post-image"
+                alt=""
+                loading="lazy"
+                title="book-23"
+                data-caption=""
+                data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg"
+                data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg"
+                data-large_image_width="750"
+                data-large_image_height="1000"
+                srcset="
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-600x800.jpg 600w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-225x300.jpg 225w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-250x333.jpg 250w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg         750w
+                "
+                sizes="(max-width: 416px) 100vw, 416px"
+            /></a>
+          </div>
+          <div
+            data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-100x100.jpg"
+            data-thumb-alt=""
+            class="woocommerce-product-gallery__image"
+          >
+            <a
+              href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg"
+              ><img
+                width="416"
+                height="555"
+                src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-600x800.jpg"
+                class=""
+                alt=""
+                loading="lazy"
+                title="book-22"
+                data-caption=""
+                data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg"
+                data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg"
+                data-large_image_width="750"
+                data-large_image_height="1000"
+                srcset="
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-600x800.jpg 600w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-225x300.jpg 225w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-250x333.jpg 250w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg         750w
+                "
+                sizes="(max-width: 416px) 100vw, 416px"
+            /></a>
+          </div>
+          <div
+            data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-100x100.jpg"
+            data-thumb-alt=""
+            class="woocommerce-product-gallery__image"
+          >
+            <a
+              href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg"
+              ><img
+                width="416"
+                height="555"
+                src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-600x800.jpg"
+                class=""
+                alt=""
+                loading="lazy"
+                title="book-21"
+                data-caption=""
+                data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg"
+                data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg"
+                data-large_image_width="750"
+                data-large_image_height="1000"
+                srcset="
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-600x800.jpg 600w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-225x300.jpg 225w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg 250w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg         750w
+                "
+                sizes="(max-width: 416px) 100vw, 416px"
+            /></a>
+          </div>
+          <div
+            data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-100x100.jpg"
+            data-thumb-alt=""
+            class="woocommerce-product-gallery__image"
+          >
+            <a
+              href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg"
+              ><img
+                width="416"
+                height="555"
+                src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-600x800.jpg"
+                class=""
+                alt=""
+                loading="lazy"
+                title="book-20"
+                data-caption=""
+                data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg"
+                data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg"
+                data-large_image_width="750"
+                data-large_image_height="1000"
+                srcset="
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-600x800.jpg 600w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-225x300.jpg 225w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-250x333.jpg 250w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg         750w
+                "
+                sizes="(max-width: 416px) 100vw, 416px"
+            /></a>
+          </div>
+          <div
+            data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-100x100.jpg"
+            data-thumb-alt=""
+            class="woocommerce-product-gallery__image"
+          >
+            <a
+              href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg"
+              ><img
+                width="416"
+                height="555"
+                src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-600x800.jpg"
+                class=""
+                alt=""
+                loading="lazy"
+                title="book-19"
+                data-caption=""
+                data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg"
+                data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg"
+                data-large_image_width="750"
+                data-large_image_height="1000"
+                srcset="
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-600x800.jpg 600w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-225x300.jpg 225w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-250x333.jpg 250w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg         750w
+                "
+                sizes="(max-width: 416px) 100vw, 416px"
+            /></a>
+          </div>
+        </figure>
+      </div>
+
+      <div class="summary entry-summary">
+        <h1 class="product_title entry-title">Lyrics of the Lalala Musical</h1>
+        <div class="woocommerce-product-rating">
+          <div class="star-rating" role="img" aria-label="Rated 4.50 out of 5">
+            <span style="width: 90%"
+              >Rated <strong class="rating">4.50</strong> out of 5 based on
+              <span class="rating">2</span> customer ratings</span
+            >
+          </div>
+          <a href="#reviews" class="woocommerce-review-link" rel="nofollow"
+            >(<span class="count">2</span> customer reviews)</a
+          >
+        </div>
+
+        <div class="woocommerce-product-details__short-description">
+          <p>
+            What can you do to save money with online shopping? You may be
+            wondering if finding coupons and sales is time consuming. If you
+            aren&#8217;t into that, there are other options. You simply need to
+            heed the tips in this piece and act on them.
+          </p>
+        </div>
+        <div class="product-offer-box">
+          <p class="price">
+            <del aria-hidden="true"
+              ><span class="woocommerce-Price-amount amount"
+                ><bdi
+                  ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                  >3.00</bdi
+                ></span
+              ></del
+            >
+            <ins
+              ><span class="woocommerce-Price-amount amount"
+                ><bdi
+                  ><span class="woocommerce-Price-currencySymbol">&#36;</span
+                  >2.00</bdi
+                ></span
+              ></ins
+            >
+          </p>
+          <p class="stock in-stock">280 in stock</p>
+
+          <form
+            class="cart"
+            action="https://demo.tokopress.com/bookie/product/lyrics-of-the-lalala-musical/"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="quantity">
+              <label class="screen-reader-text" for="quantity_62ee632c329f0"
+                >Lyrics of the Lalala Musical quantity</label
+              >
               <input
-                name="s"
-                value=""
-                type="text"
-                class="form-control"
-                id="keyword"
-                placeholder="Book Title"
+                type="number"
+                id="quantity_62ee632c329f0"
+                class="input-text qty text"
+                step="1"
+                min="1"
+                max="280"
+                name="quantity"
+                value="1"
+                title="Qty"
+                size="4"
+                placeholder=""
+                inputmode="numeric"
               />
             </div>
-          </div>
 
-          <div class="col-sm-6 col-md-3">
-            <div class="form-group">
-              <select name="product_cat" id="product_cat" class="form-control">
-                <option value="0">Book Category</option>
-                <option class="level-0" value="drama">Drama</option>
-                <option class="level-1" value="inspiration">
-                  &nbsp;&nbsp;&nbsp;Inspiration
-                </option>
-                <option class="level-1" value="love-story">
-                  &nbsp;&nbsp;&nbsp;Love Story
-                </option>
-                <option class="level-0" value="life-style">Life Style</option>
-                <option class="level-1" value="business">
-                  &nbsp;&nbsp;&nbsp;Business
-                </option>
-                <option class="level-1" value="culture">
-                  &nbsp;&nbsp;&nbsp;Culture
-                </option>
-                <option class="level-0" value="science">Science</option>
-              </select>
-              <i class="select-arrow fa fa-angle-down"></i>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-3">
-            <div class="form-group">
-              <select name="book_author" id="book_author" class="form-control">
-                <option value="0">Book Author</option>
-                <option class="level-0" value="atkia">Atkia</option>
-                <option class="level-0" value="brian-owell">
-                  Brian O&#8217;Well
-                </option>
-                <option class="level-0" value="saifudin-a">Saifudin A.</option>
-                <option class="level-0" value="sarfaraz">Sarfaraz</option>
-              </select>
-              <i class="select-arrow fa fa-angle-down"></i>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-3">
-            <div class="form-group">
-              <input type="hidden" name="post_type" value="product" />
-              <button type="submit" class="btn btn-primary btn-block">
-                <i class="fa fa-search"></i> &nbsp; Find Book
-              </button>
-            </div>
-          </div>
+            <button
+              type="submit"
+              name="add-to-cart"
+              value="99"
+              class="single_add_to_cart_button button alt"
+            >
+              Add to cart
+            </button>
+          </form>
         </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="main-content-container container">
-    <div id="content" class="main-content-inner" role="main">
-      <div class="woocommerce-notices-wrapper"></div>
-      <div
-        id="product-99"
-        class="product type-product post-99 status-publish first instock product_cat-culture product_cat-life-style product_tag-dream product_tag-music product_tag-sound has-post-thumbnail sale featured shipping-taxable purchasable product-type-simple"
-      >
-        <span class="onsale">Sale!</span>
-        <div
-          class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
-          data-columns="4"
-          style="opacity: 0; transition: opacity 0.25s ease-in-out"
-        >
-          <figure class="woocommerce-product-gallery__wrapper">
-            <div
-              data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-100x100.jpg"
-              data-thumb-alt=""
-              class="woocommerce-product-gallery__image"
-            >
-              <a
-                href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg"
-                ><img
-                  width="416"
-                  height="555"
-                  src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-600x800.jpg"
-                  class="wp-post-image"
-                  alt=""
-                  loading="lazy"
-                  title="book-23"
-                  data-caption=""
-                  data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg"
-                  data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg"
-                  data-large_image_width="750"
-                  data-large_image_height="1000"
-                  srcset="
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-600x800.jpg 600w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-225x300.jpg 225w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23-250x333.jpg 250w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-23.jpg         750w
-                  "
-                  sizes="(max-width: 416px) 100vw, 416px"
-              /></a>
-            </div>
-            <div
-              data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-100x100.jpg"
-              data-thumb-alt=""
-              class="woocommerce-product-gallery__image"
-            >
-              <a
-                href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg"
-                ><img
-                  width="416"
-                  height="555"
-                  src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-600x800.jpg"
-                  class=""
-                  alt=""
-                  loading="lazy"
-                  title="book-22"
-                  data-caption=""
-                  data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg"
-                  data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg"
-                  data-large_image_width="750"
-                  data-large_image_height="1000"
-                  srcset="
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-600x800.jpg 600w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-225x300.jpg 225w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22-250x333.jpg 250w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-22.jpg         750w
-                  "
-                  sizes="(max-width: 416px) 100vw, 416px"
-              /></a>
-            </div>
-            <div
-              data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-100x100.jpg"
-              data-thumb-alt=""
-              class="woocommerce-product-gallery__image"
-            >
-              <a
-                href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg"
-                ><img
-                  width="416"
-                  height="555"
-                  src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-600x800.jpg"
-                  class=""
-                  alt=""
-                  loading="lazy"
-                  title="book-21"
-                  data-caption=""
-                  data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg"
-                  data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg"
-                  data-large_image_width="750"
-                  data-large_image_height="1000"
-                  srcset="
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-600x800.jpg 600w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-225x300.jpg 225w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg 250w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg         750w
-                  "
-                  sizes="(max-width: 416px) 100vw, 416px"
-              /></a>
-            </div>
-            <div
-              data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-100x100.jpg"
-              data-thumb-alt=""
-              class="woocommerce-product-gallery__image"
-            >
-              <a
-                href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg"
-                ><img
-                  width="416"
-                  height="555"
-                  src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-600x800.jpg"
-                  class=""
-                  alt=""
-                  loading="lazy"
-                  title="book-20"
-                  data-caption=""
-                  data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg"
-                  data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg"
-                  data-large_image_width="750"
-                  data-large_image_height="1000"
-                  srcset="
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-600x800.jpg 600w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-225x300.jpg 225w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20-250x333.jpg 250w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-20.jpg         750w
-                  "
-                  sizes="(max-width: 416px) 100vw, 416px"
-              /></a>
-            </div>
-            <div
-              data-thumb="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-100x100.jpg"
-              data-thumb-alt=""
-              class="woocommerce-product-gallery__image"
-            >
-              <a
-                href="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg"
-                ><img
-                  width="416"
-                  height="555"
-                  src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-600x800.jpg"
-                  class=""
-                  alt=""
-                  loading="lazy"
-                  title="book-19"
-                  data-caption=""
-                  data-src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg"
-                  data-large_image="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg"
-                  data-large_image_width="750"
-                  data-large_image_height="1000"
-                  srcset="
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-600x800.jpg 600w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-225x300.jpg 225w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-250x333.jpg 250w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg         750w
-                  "
-                  sizes="(max-width: 416px) 100vw, 416px"
-              /></a>
-            </div>
-          </figure>
-        </div>
-
-        <div class="summary entry-summary">
-          <h1 class="product_title entry-title">
-            Lyrics of the Lalala Musical
-          </h1>
-          <div class="woocommerce-product-rating">
-            <div
-              class="star-rating"
-              role="img"
-              aria-label="Rated 4.50 out of 5"
-            >
-              <span style="width: 90%"
-                >Rated <strong class="rating">4.50</strong> out of 5 based on
-                <span class="rating">2</span> customer ratings</span
-              >
-            </div>
-            <a href="#reviews" class="woocommerce-review-link" rel="nofollow"
-              >(<span class="count">2</span> customer reviews)</a
-            >
-          </div>
-
-          <div class="woocommerce-product-details__short-description">
-            <p>
-              What can you do to save money with online shopping? You may be
-              wondering if finding coupons and sales is time consuming. If you
-              aren&#8217;t into that, there are other options. You simply need
-              to heed the tips in this piece and act on them.
-            </p>
-          </div>
-          <div class="product-offer-box">
-            <p class="price">
-              <del aria-hidden="true"
-                ><span class="woocommerce-Price-amount amount"
-                  ><bdi
-                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
-                    >3.00</bdi
-                  ></span
-                ></del
-              >
-              <ins
-                ><span class="woocommerce-Price-amount amount"
-                  ><bdi
-                    ><span class="woocommerce-Price-currencySymbol">&#36;</span
-                    >2.00</bdi
-                  ></span
-                ></ins
-              >
-            </p>
-            <p class="stock in-stock">280 in stock</p>
-
-            <form
-              class="cart"
-              action="https://demo.tokopress.com/bookie/product/lyrics-of-the-lalala-musical/"
-              method="post"
-              enctype="multipart/form-data"
-            >
-              <div class="quantity">
-                <label class="screen-reader-text" for="quantity_62ee632c329f0"
-                  >Lyrics of the Lalala Musical quantity</label
-                >
-                <input
-                  type="number"
-                  id="quantity_62ee632c329f0"
-                  class="input-text qty text"
-                  step="1"
-                  min="1"
-                  max="280"
-                  name="quantity"
-                  value="1"
-                  title="Qty"
-                  size="4"
-                  placeholder=""
-                  inputmode="numeric"
-                />
-              </div>
-
-              <button
-                type="submit"
-                name="add-to-cart"
-                value="99"
-                class="single_add_to_cart_button button alt"
-              >
-                Add to cart
-              </button>
-            </form>
-          </div>
-          <div class="product_meta">
-            <span class="posted_in"
-              >Categories:
-              <a
-                href="https://demo.tokopress.com/bookie/product-category/life-style/culture/"
-                rel="tag"
-                >Culture</a
-              >,
-              <a
-                href="https://demo.tokopress.com/bookie/product-category/life-style/"
-                rel="tag"
-                >Life Style</a
-              ></span
-            >
-            <span class="tagged_as"
-              >Tags:
-              <a
-                href="https://demo.tokopress.com/bookie/product-tag/dream/"
-                rel="tag"
-                >Dream</a
-              >,
-              <a
-                href="https://demo.tokopress.com/bookie/product-tag/music/"
-                rel="tag"
-                >Music</a
-              >,
-              <a
-                href="https://demo.tokopress.com/bookie/product-tag/sound/"
-                rel="tag"
-                >Sound</a
-              ></span
-            >
-          </div>
-        </div>
-
-        <div class="section-book-details clearfix">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="book-details">
-                <h3>Book Details</h3>
-                <table class="woocommerce-product-attributes shop_attributes">
-                  <tr
-                    class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pages"
-                  >
-                    <th class="woocommerce-product-attributes-item__label">
-                      Pages
-                    </th>
-                    <td class="woocommerce-product-attributes-item__value">
-                      <p>133 Pages</p>
-                    </td>
-                  </tr>
-                  <tr
-                    class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_cover-design"
-                  >
-                    <th class="woocommerce-product-attributes-item__label">
-                      Cover Design
-                    </th>
-                    <td class="woocommerce-product-attributes-item__value">
-                      <p>Rebbeca L.</p>
-                    </td>
-                  </tr>
-                  <tr
-                    class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_publisher"
-                  >
-                    <th class="woocommerce-product-attributes-item__label">
-                      Publisher
-                    </th>
-                    <td class="woocommerce-product-attributes-item__value">
-                      <p>Spartan S &amp; S</p>
-                    </td>
-                  </tr>
-                  <tr
-                    class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_language"
-                  >
-                    <th class="woocommerce-product-attributes-item__label">
-                      Language
-                    </th>
-                    <td class="woocommerce-product-attributes-item__value">
-                      <p>English</p>
-                    </td>
-                  </tr>
-                  <tr
-                    class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_isbn"
-                  >
-                    <th class="woocommerce-product-attributes-item__label">
-                      ISBN
-                    </th>
-                    <td class="woocommerce-product-attributes-item__value">
-                      <p>7787555</p>
-                    </td>
-                  </tr>
-                  <tr
-                    class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_released"
-                  >
-                    <th class="woocommerce-product-attributes-item__label">
-                      Released
-                    </th>
-                    <td class="woocommerce-product-attributes-item__value">
-                      <p>July 2013</p>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="book-authors">
-                <h3>About The Author</h3>
-
-                <img
-                  width="120"
-                  height="120"
-                  src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/author-02.jpg"
-                  class="img-circle pull-right"
-                  alt="Saifudin A."
-                  loading="lazy"
-                  srcset="
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/author-02.jpg         120w,
-                    https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/author-02-100x100.jpg 100w
-                  "
-                  sizes="(max-width: 120px) 100vw, 120px"
-                />
-
-                <h4>Saifudin A.</h4>
-                <p>
-                  How to Build a Successful Blog Business is a straight forward
-                  guide to building a publishing business online that covers
-                  everything from choosing a niche to hiring staff, registering
-                  a business to selling it.<br />
-                  Finding traffic to monetizing it whether you are interested in
-                  creating an additional income stream or building a
-                  fully-fledged business, this is an essential read for web
-                  entrepreneurs and online publishers.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="woocommerce-tabs wc-tabs-wrapper">
-          <ul class="tabs wc-tabs" role="tablist">
-            <li
-              class="description_tab"
-              id="tab-title-description"
-              role="tab"
-              aria-controls="tab-description"
-            >
-              <a href="#tab-description"> Description </a>
-            </li>
-            <li
-              class="reviews_tab"
-              id="tab-title-reviews"
-              role="tab"
-              aria-controls="tab-reviews"
-            >
-              <a href="#tab-reviews"> Reviews (2) </a>
-            </li>
-          </ul>
-          <div
-            class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"
-            id="tab-description"
-            role="tabpanel"
-            aria-labelledby="tab-title-description"
+        <div class="product_meta">
+          <span class="posted_in"
+            >Categories:
+            <a
+              href="https://demo.tokopress.com/bookie/product-category/life-style/culture/"
+              rel="tag"
+              >Culture</a
+            >,
+            <a
+              href="https://demo.tokopress.com/bookie/product-category/life-style/"
+              rel="tag"
+              >Life Style</a
+            ></span
           >
-            <p>
-              If you want to buy books online, you&#8217;ll get a better deal if
-              you get them used. Depending on the condition you get them in, you
-              may just end up paying a few cents plus shipping. Make sure you
-              read through the description of the book to see if there are any
-              damages you should be aware of.
-            </p>
-            <p>
-              Be sure to read everything about the item that you want to buy. A
-              picture of a product can be deceiving. They can make products look
-              much smaller or bigger that they really are. Reading the
-              description will allow you to be confident in the item you are
-              purchasing.
-            </p>
-            <p>
-              Look into online shopping clubs. Sites like ebates.com have some
-              tremendous offers. You not only find out about sales going on at
-              different sites, but they pay you a percentage of your purchase
-              when you buy from those sites. It is a great way to get a bonus
-              check every four months and get the things you need.
-            </p>
-            <p>
-              Be aware of shipping order laws for online merchants. The company
-              is supposed to send your order within the time frame listed in its
-              ad. By law, they have 30 days to send you your order or give you
-              an option to cancel your order. If you do not receive your order
-              within this time frame, call the company to let them know.
-            </p>
+          <span class="tagged_as"
+            >Tags:
+            <a
+              href="https://demo.tokopress.com/bookie/product-tag/dream/"
+              rel="tag"
+              >Dream</a
+            >,
+            <a
+              href="https://demo.tokopress.com/bookie/product-tag/music/"
+              rel="tag"
+              >Music</a
+            >,
+            <a
+              href="https://demo.tokopress.com/bookie/product-tag/sound/"
+              rel="tag"
+              >Sound</a
+            ></span
+          >
+        </div>
+      </div>
+
+      <div class="section-book-details clearfix">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="book-details">
+              <h3>Book Details</h3>
+              <table class="woocommerce-product-attributes shop_attributes">
+                <tr
+                  class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pages"
+                >
+                  <th class="woocommerce-product-attributes-item__label">
+                    Pages
+                  </th>
+                  <td class="woocommerce-product-attributes-item__value">
+                    <p>133 Pages</p>
+                  </td>
+                </tr>
+                <tr
+                  class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_cover-design"
+                >
+                  <th class="woocommerce-product-attributes-item__label">
+                    Cover Design
+                  </th>
+                  <td class="woocommerce-product-attributes-item__value">
+                    <p>Rebbeca L.</p>
+                  </td>
+                </tr>
+                <tr
+                  class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_publisher"
+                >
+                  <th class="woocommerce-product-attributes-item__label">
+                    Publisher
+                  </th>
+                  <td class="woocommerce-product-attributes-item__value">
+                    <p>Spartan S &amp; S</p>
+                  </td>
+                </tr>
+                <tr
+                  class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_language"
+                >
+                  <th class="woocommerce-product-attributes-item__label">
+                    Language
+                  </th>
+                  <td class="woocommerce-product-attributes-item__value">
+                    <p>English</p>
+                  </td>
+                </tr>
+                <tr
+                  class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_isbn"
+                >
+                  <th class="woocommerce-product-attributes-item__label">
+                    ISBN
+                  </th>
+                  <td class="woocommerce-product-attributes-item__value">
+                    <p>7787555</p>
+                  </td>
+                </tr>
+                <tr
+                  class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_released"
+                >
+                  <th class="woocommerce-product-attributes-item__label">
+                    Released
+                  </th>
+                  <td class="woocommerce-product-attributes-item__value">
+                    <p>July 2013</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-          <!-- <div
+
+          <div class="col-md-6">
+            <div class="book-authors">
+              <h3>About The Author</h3>
+
+              <img
+                width="120"
+                height="120"
+                src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/author-02.jpg"
+                class="img-circle pull-right"
+                alt="Saifudin A."
+                loading="lazy"
+                srcset="
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/author-02.jpg         120w,
+                  https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/author-02-100x100.jpg 100w
+                "
+                sizes="(max-width: 120px) 100vw, 120px"
+              />
+
+              <h4>Saifudin A.</h4>
+              <p>
+                How to Build a Successful Blog Business is a straight forward
+                guide to building a publishing business online that covers
+                everything from choosing a niche to hiring staff, registering a
+                business to selling it.<br />
+                Finding traffic to monetizing it whether you are interested in
+                creating an additional income stream or building a fully-fledged
+                business, this is an essential read for web entrepreneurs and
+                online publishers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="woocommerce-tabs wc-tabs-wrapper">
+        <ul class="tabs wc-tabs" role="tablist">
+          <li
+            class="description_tab"
+            id="tab-title-description"
+            role="tab"
+            aria-controls="tab-description"
+          >
+            <a href="#tab-description"> Description </a>
+          </li>
+          <li
+            class="reviews_tab"
+            id="tab-title-reviews"
+            role="tab"
+            aria-controls="tab-reviews"
+          >
+            <a href="#tab-reviews"> Reviews (2) </a>
+          </li>
+        </ul>
+        <div
+          class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"
+          id="tab-description"
+          role="tabpanel"
+          aria-labelledby="tab-title-description"
+        >
+          <p>
+            If you want to buy books online, you&#8217;ll get a better deal if
+            you get them used. Depending on the condition you get them in, you
+            may just end up paying a few cents plus shipping. Make sure you read
+            through the description of the book to see if there are any damages
+            you should be aware of.
+          </p>
+          <p>
+            Be sure to read everything about the item that you want to buy. A
+            picture of a product can be deceiving. They can make products look
+            much smaller or bigger that they really are. Reading the description
+            will allow you to be confident in the item you are purchasing.
+          </p>
+          <p>
+            Look into online shopping clubs. Sites like ebates.com have some
+            tremendous offers. You not only find out about sales going on at
+            different sites, but they pay you a percentage of your purchase when
+            you buy from those sites. It is a great way to get a bonus check
+            every four months and get the things you need.
+          </p>
+          <p>
+            Be aware of shipping order laws for online merchants. The company is
+            supposed to send your order within the time frame listed in its ad.
+            By law, they have 30 days to send you your order or give you an
+            option to cancel your order. If you do not receive your order within
+            this time frame, call the company to let them know.
+          </p>
+        </div>
+        <!-- <div
                class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab"
                id="tab-reviews"
                role="tabpanel"
@@ -793,541 +788,539 @@
                </div> 
           </div>
           </div> -->
-        </div>
       </div>
     </div>
+  </div>
 
-    <div class="section-products-list section-products-list-upsells">
-      <div class="container">
-        <section class="up-sells upsells products">
-          <h2>You may also like&hellip;</h2>
+  <div class="section-products-list section-products-list-upsells">
+    <div class="container">
+      <section class="up-sells upsells products">
+        <h2>You may also like&hellip;</h2>
 
-          <ul class="products columns-4">
-            <li
-              class="product type-product post-56 status-publish first instock product_cat-drama product_cat-love-story product_tag-money product_tag-music product_tag-novel has-post-thumbnail featured shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner">
-                <a
-                  href="https://demo.tokopress.com/bookie/product/humans-of-new-york-stories/"
-                  class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                  ><figure class="product-image-box">
-                    <img
-                      width="250"
-                      height="333"
-                      src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11-250x333.jpg"
-                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt=""
-                      loading="lazy"
-                      srcset="
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11-250x333.jpg 250w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11-225x300.jpg 225w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11-600x800.jpg 600w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11.jpg         750w
-                      "
-                      sizes="(max-width: 250px) 100vw, 250px"
-                    />
-                  </figure>
-                  <div class="product-price-box clearfix">
-                    <h2 class="woocommerce-loop-product__title">
-                      Humans of New York: Stories
-                    </h2>
-                    <span class="person-name vcard">Saifudin A.</span>
-                    <span class="price"
+        <ul class="products columns-4">
+          <li
+            class="product type-product post-56 status-publish first instock product_cat-drama product_cat-love-story product_tag-money product_tag-music product_tag-novel has-post-thumbnail featured shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="https://demo.tokopress.com/bookie/product/humans-of-new-york-stories/"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-11.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                </figure>
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">
+                    Humans of New York: Stories
+                  </h2>
+                  <span class="person-name vcard">Saifudin A.</span>
+                  <span class="price"
+                    ><span class="woocommerce-Price-amount amount"
+                      ><bdi
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >&#36;</span
+                        >35.00</bdi
+                      ></span
+                    ></span
+                  >
+                </div></a
+              >
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="https://demo.tokopress.com/bookie/product/humans-of-new-york-stories/"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="?add-to-cart=56"
+                    data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                    data-product_id="56"
+                    data-product_sku=""
+                    aria-label="Add &ldquo;Humans of New York: Stories&rdquo; to your cart"
+                    rel="nofollow"
+                    >Buy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="product type-product post-70 status-publish instock product_cat-science product_tag-culture product_tag-money product_tag-novel has-post-thumbnail sale featured shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="https://demo.tokopress.com/bookie/product/a-young-woman-tells-you-what-shes-learned/"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  <span class="onsale">Sale!</span>
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                </figure>
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">Rogue Lawyer</h2>
+                  <span class="person-name vcard">Atkia</span>
+                  <span class="price"
+                    ><del aria-hidden="true"
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
                             >&#36;</span
-                          >35.00</bdi
+                          >15.00</bdi
                         ></span
-                      ></span
+                      ></del
                     >
-                  </div></a
-                >
-                <div class="woo-button-wrapper">
-                  <div class="woo-button-border">
-                    <a
-                      href="https://demo.tokopress.com/bookie/product/humans-of-new-york-stories/"
-                      class="button product-button"
-                      >Detail</a
-                    ><a
-                      href="?add-to-cart=56"
-                      data-quantity="1"
-                      class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                      data-product_id="56"
-                      data-product_sku=""
-                      aria-label="Add &ldquo;Humans of New York: Stories&rdquo; to your cart"
-                      rel="nofollow"
-                      >Buy</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="product type-product post-70 status-publish instock product_cat-science product_tag-culture product_tag-money product_tag-novel has-post-thumbnail sale featured shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner">
-                <a
-                  href="https://demo.tokopress.com/bookie/product/a-young-woman-tells-you-what-shes-learned/"
-                  class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                  ><figure class="product-image-box">
-                    <span class="onsale">Sale!</span>
-                    <img
-                      width="250"
-                      height="333"
-                      src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14-250x333.jpg"
-                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt=""
-                      loading="lazy"
-                      srcset="
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14-250x333.jpg 250w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14-225x300.jpg 225w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14-600x800.jpg 600w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-14.jpg         750w
-                      "
-                      sizes="(max-width: 250px) 100vw, 250px"
-                    />
-                  </figure>
-                  <div class="product-price-box clearfix">
-                    <h2 class="woocommerce-loop-product__title">
-                      Rogue Lawyer
-                    </h2>
-                    <span class="person-name vcard">Atkia</span>
-                    <span class="price"
-                      ><del aria-hidden="true"
-                        ><span class="woocommerce-Price-amount amount"
-                          ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >&#36;</span
-                            >15.00</bdi
-                          ></span
-                        ></del
-                      >
-                      <ins
-                        ><span class="woocommerce-Price-amount amount"
-                          ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >&#36;</span
-                            >12.00</bdi
-                          ></span
-                        ></ins
-                      ></span
-                    >
-                  </div></a
-                >
-                <div class="woo-button-wrapper">
-                  <div class="woo-button-border">
-                    <a
-                      href="https://demo.tokopress.com/bookie/product/a-young-woman-tells-you-what-shes-learned/"
-                      class="button product-button"
-                      >Detail</a
-                    ><a
-                      href="?add-to-cart=70"
-                      data-quantity="1"
-                      class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                      data-product_id="70"
-                      data-product_sku=""
-                      aria-label="Add &ldquo;Rogue Lawyer&rdquo; to your cart"
-                      rel="nofollow"
-                      >Buy</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="product type-product post-53 status-publish instock product_cat-drama product_cat-love-story product_tag-etnic product_tag-music product_tag-novel has-post-thumbnail shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner">
-                <a
-                  href="https://demo.tokopress.com/bookie/product/everythings-eventual-dark/"
-                  class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                  ><figure class="product-image-box">
-                    <img
-                      width="250"
-                      height="333"
-                      src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10-250x333.jpg"
-                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt=""
-                      loading="lazy"
-                      srcset="
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10-250x333.jpg 250w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10-225x300.jpg 225w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10-600x800.jpg 600w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10.jpg         750w
-                      "
-                      sizes="(max-width: 250px) 100vw, 250px"
-                    />
-                  </figure>
-                  <div class="product-price-box clearfix">
-                    <h2 class="woocommerce-loop-product__title">
-                      Everything&#8217;s Eventual: Dark
-                    </h2>
-                    <span class="person-name vcard">Brian O'Well</span>
-                    <span class="price"
+                    <ins
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
                             >&#36;</span
-                          >35.00</bdi
+                          >12.00</bdi
                         ></span
-                      ></span
-                    >
-                  </div></a
-                >
-                <div class="woo-button-wrapper">
-                  <div class="woo-button-border">
-                    <a
-                      href="https://demo.tokopress.com/bookie/product/everythings-eventual-dark/"
-                      class="button product-button"
-                      >Detail</a
-                    ><a
-                      href="?add-to-cart=53"
-                      data-quantity="1"
-                      class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                      data-product_id="53"
-                      data-product_sku=""
-                      aria-label="Add &ldquo;Everything&#039;s Eventual: Dark&rdquo; to your cart"
-                      rel="nofollow"
-                      >Buy</a
-                    >
-                  </div>
+                      ></ins
+                    ></span
+                  >
+                </div></a
+              >
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="https://demo.tokopress.com/bookie/product/a-young-woman-tells-you-what-shes-learned/"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="?add-to-cart=70"
+                    data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                    data-product_id="70"
+                    data-product_sku=""
+                    aria-label="Add &ldquo;Rogue Lawyer&rdquo; to your cart"
+                    rel="nofollow"
+                    >Buy</a
+                  >
                 </div>
               </div>
-            </li>
+            </div>
+          </li>
 
-            <li
-              class="product type-product post-15 status-publish last outofstock product_cat-drama product_cat-inspiration product_tag-culture product_tag-novel product_tag-sound has-post-thumbnail sale shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner">
-                <a
-                  href="https://demo.tokopress.com/bookie/product/5-minute-stories/"
-                  class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                  ><figure class="product-image-box">
-                    <span class="onsale">Sale!</span>
-                    <img
-                      width="250"
-                      height="333"
-                      src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01-250x333.jpg"
-                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt=""
-                      loading="lazy"
-                      srcset="
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01-250x333.jpg 250w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01-225x300.jpg 225w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01-600x800.jpg 600w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01.jpg         750w
-                      "
-                      sizes="(max-width: 250px) 100vw, 250px"
-                    />
-                  </figure>
-                  <div class="product-price-box clearfix">
-                    <h2 class="woocommerce-loop-product__title">
-                      5-Minute Stories
-                    </h2>
-                    <span class="person-name vcard">Atkia</span>
-                    <span class="price"
-                      ><del aria-hidden="true"
-                        ><span class="woocommerce-Price-amount amount"
-                          ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >&#36;</span
-                            >20.00</bdi
-                          ></span
-                        ></del
-                      >
-                      <ins
-                        ><span class="woocommerce-Price-amount amount"
-                          ><bdi
-                            ><span class="woocommerce-Price-currencySymbol"
-                              >&#36;</span
-                            >18.00</bdi
-                          ></span
-                        ></ins
+          <li
+            class="product type-product post-53 status-publish instock product_cat-drama product_cat-love-story product_tag-etnic product_tag-music product_tag-novel has-post-thumbnail shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="https://demo.tokopress.com/bookie/product/everythings-eventual-dark/"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-10.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                </figure>
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">
+                    Everything&#8217;s Eventual: Dark
+                  </h2>
+                  <span class="person-name vcard">Brian O'Well</span>
+                  <span class="price"
+                    ><span class="woocommerce-Price-amount amount"
+                      ><bdi
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >&#36;</span
+                        >35.00</bdi
                       ></span
-                    >
-                  </div></a
-                >
-                <div class="woo-button-wrapper">
-                  <div class="woo-button-border">
-                    <a
-                      href="https://demo.tokopress.com/bookie/product/5-minute-stories/"
-                      class="button product-button"
-                      >Detail</a
-                    ><a
-                      href="https://demo.tokopress.com/bookie/product/5-minute-stories/"
-                      data-quantity="1"
-                      class="button product_type_simple"
-                      data-product_id="15"
-                      data-product_sku=""
-                      aria-label="Read more about &ldquo;5-Minute Stories&rdquo;"
-                      rel="nofollow"
-                      >Buy</a
-                    >
-                  </div>
+                    ></span
+                  >
+                </div></a
+              >
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="https://demo.tokopress.com/bookie/product/everythings-eventual-dark/"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="?add-to-cart=53"
+                    data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                    data-product_id="53"
+                    data-product_sku=""
+                    aria-label="Add &ldquo;Everything&#039;s Eventual: Dark&rdquo; to your cart"
+                    rel="nofollow"
+                    >Buy</a
+                  >
                 </div>
               </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </div>
+            </div>
+          </li>
 
-    <div class="section-products-list section-products-list-related">
-      <div class="container">
-        <section class="related products">
-          <h2>Related products</h2>
-
-          <ul class="products columns-4">
-            <li
-              class="product type-product post-87 status-publish first instock product_cat-business product_cat-life-style product_tag-dream product_tag-money has-post-thumbnail downloadable shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner">
-                <a
-                  href="https://demo.tokopress.com/bookie/product/kill-shot-assassin-thriller/"
-                  class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                  ><figure class="product-image-box">
-                    <img
-                      width="250"
-                      height="333"
-                      src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-250x333.jpg"
-                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt=""
-                      loading="lazy"
-                      srcset="
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-250x333.jpg 250w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-225x300.jpg 225w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-600x800.jpg 600w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg         750w
-                      "
-                      sizes="(max-width: 250px) 100vw, 250px"
-                    />
-                  </figure>
-                  <div class="product-price-box clearfix">
-                    <h2 class="woocommerce-loop-product__title">
-                      Kill Shot Assassin Thriller
-                    </h2>
-                    <span class="person-name vcard">Saifudin A.</span>
-                    <span class="price"
-                      ><span class="woocommerce-Price-amount amount"
-                        ><bdi
-                          ><span class="woocommerce-Price-currencySymbol"
-                            >&#36;</span
-                          >9.00</bdi
-                        ></span
-                      ></span
-                    >
-                  </div></a
-                >
-                <div class="woo-button-wrapper">
-                  <div class="woo-button-border">
-                    <a
-                      href="https://demo.tokopress.com/bookie/product/kill-shot-assassin-thriller/"
-                      class="button product-button"
-                      >Detail</a
-                    ><a
-                      href="?add-to-cart=87"
-                      data-quantity="1"
-                      class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                      data-product_id="87"
-                      data-product_sku=""
-                      aria-label="Add &ldquo;Kill Shot Assassin Thriller&rdquo; to your cart"
-                      rel="nofollow"
-                      >Buy</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="product type-product post-60 status-publish instock product_cat-drama product_cat-love-story product_tag-money product_tag-novel product_tag-sound has-post-thumbnail shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner">
-                <a
-                  href="https://demo.tokopress.com/bookie/product/mm-train/"
-                  class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                  ><figure class="product-image-box">
-                    <img
-                      width="250"
-                      height="333"
-                      src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12-250x333.jpg"
-                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt=""
-                      loading="lazy"
-                      srcset="
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12-250x333.jpg 250w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12-225x300.jpg 225w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12-600x800.jpg 600w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12.jpg         750w
-                      "
-                      sizes="(max-width: 250px) 100vw, 250px"
-                    />
-                  </figure>
-                  <div class="product-price-box clearfix">
-                    <h2 class="woocommerce-loop-product__title">MM Train</h2>
-                    <span class="person-name vcard">Atkia</span>
-                    <span class="price"
-                      ><span class="woocommerce-Price-amount amount"
-                        ><bdi
-                          ><span class="woocommerce-Price-currencySymbol"
-                            >&#36;</span
-                          >35.00</bdi
-                        ></span
-                      ></span
-                    >
-                  </div></a
-                >
-                <div class="woo-button-wrapper">
-                  <div class="woo-button-border">
-                    <a
-                      href="https://demo.tokopress.com/bookie/product/mm-train/"
-                      class="button product-button"
-                      >Detail</a
-                    ><a
-                      href="?add-to-cart=60"
-                      data-quantity="1"
-                      class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                      data-product_id="60"
-                      data-product_sku=""
-                      aria-label="Add &ldquo;MM Train&rdquo; to your cart"
-                      rel="nofollow"
-                      >Buy</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="product type-product post-93 status-publish instock product_cat-culture product_cat-life-style product_tag-culture product_tag-dream product_tag-etnic has-post-thumbnail downloadable shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner">
-                <a
-                  href="https://demo.tokopress.com/bookie/product/the-dead-compendium-volume-3/"
-                  class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                  ><figure class="product-image-box">
-                    <img
-                      width="250"
-                      height="333"
-                      src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg"
-                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt=""
-                      loading="lazy"
-                      srcset="
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg 250w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-225x300.jpg 225w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-600x800.jpg 600w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg         750w
-                      "
-                      sizes="(max-width: 250px) 100vw, 250px"
-                    />
-                  </figure>
-
-                  <div class="product-price-box clearfix">
-                    <h2 class="woocommerce-loop-product__title">
-                      The Dead Compendium Volume 3
-                    </h2>
-                    <span class="person-name vcard">Brian O'Well</span>
-                    <span class="price"
-                      ><span class="woocommerce-Price-amount amount"
-                        ><bdi
-                          ><span class="woocommerce-Price-currencySymbol"
-                            >&#36;</span
-                          >3.00</bdi
-                        ></span
-                      ></span
-                    >
-                  </div></a
-                >
-                <div class="woo-button-wrapper">
-                  <div class="woo-button-border">
-                    <a
-                      href="https://demo.tokopress.com/bookie/product/the-dead-compendium-volume-3/"
-                      class="button product-button"
-                      >Detail</a
-                    ><a
-                      href="?add-to-cart=93"
-                      data-quantity="1"
-                      class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                      data-product_id="93"
-                      data-product_sku=""
-                      aria-label="Add &ldquo;The Dead Compendium Volume 3&rdquo; to your cart"
-                      rel="nofollow"
-                      >Buy</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="product type-product post-19 status-publish last instock product_cat-drama product_cat-inspiration product_tag-culture product_tag-music product_tag-novel has-post-thumbnail shipping-taxable purchasable product-type-simple"
-            >
-              <div class="product-inner">
-                <a
-                  href="https://demo.tokopress.com/bookie/product/the-forgotten-garden/"
-                  class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                  ><figure class="product-image-box">
-                    <img
-                      width="250"
-                      height="333"
-                      src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02-250x333.jpg"
-                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt=""
-                      loading="lazy"
-                      srcset="
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02-250x333.jpg 250w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02-225x300.jpg 225w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02-600x800.jpg 600w,
-                        https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02.jpg         750w
-                      "
-                      sizes="(max-width: 250px) 100vw, 250px"
-                    />
-                  </figure>
-                  <div class="product-price-box clearfix">
-                    <h2 class="woocommerce-loop-product__title">
-                      The Forgotten Garden
-                    </h2>
-                    <span class="person-name vcard">Sarfaraz</span>
-                    <span class="price"
+          <li
+            class="product type-product post-15 status-publish last outofstock product_cat-drama product_cat-inspiration product_tag-culture product_tag-novel product_tag-sound has-post-thumbnail sale shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="https://demo.tokopress.com/bookie/product/5-minute-stories/"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  <span class="onsale">Sale!</span>
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-01.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                </figure>
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">
+                    5-Minute Stories
+                  </h2>
+                  <span class="person-name vcard">Atkia</span>
+                  <span class="price"
+                    ><del aria-hidden="true"
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
                           ><span class="woocommerce-Price-currencySymbol"
                             >&#36;</span
                           >20.00</bdi
                         ></span
-                      ></span
+                      ></del
                     >
-                  </div>
-                </a>
-                <div class="woo-button-wrapper">
-                  <div class="woo-button-border">
-                    <a
-                      href="https://demo.tokopress.com/bookie/product/the-forgotten-garden/"
-                      class="button product-button"
-                      >Detail</a
-                    ><a
-                      href="?add-to-cart=19"
-                      data-quantity="1"
-                      class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                      data-product_id="19"
-                      data-product_sku=""
-                      aria-label="Add &ldquo;The Forgotten Garden&rdquo; to your cart"
-                      rel="nofollow"
-                      >Buy</a
-                    >
-                  </div>
+                    <ins
+                      ><span class="woocommerce-Price-amount amount"
+                        ><bdi
+                          ><span class="woocommerce-Price-currencySymbol"
+                            >&#36;</span
+                          >18.00</bdi
+                        ></span
+                      ></ins
+                    ></span
+                  >
+                </div></a
+              >
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="https://demo.tokopress.com/bookie/product/5-minute-stories/"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="https://demo.tokopress.com/bookie/product/5-minute-stories/"
+                    data-quantity="1"
+                    class="button product_type_simple"
+                    data-product_id="15"
+                    data-product_sku=""
+                    aria-label="Read more about &ldquo;5-Minute Stories&rdquo;"
+                    rel="nofollow"
+                    >Buy</a
+                  >
                 </div>
               </div>
-            </li>
-          </ul>
-        </section>
-      </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="section-products-list section-products-list-related">
+    <div class="container">
+      <section class="related products">
+        <h2>Related products</h2>
+
+        <ul class="products columns-4">
+          <li
+            class="product type-product post-87 status-publish first instock product_cat-business product_cat-life-style product_tag-dream product_tag-money has-post-thumbnail downloadable shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="https://demo.tokopress.com/bookie/product/kill-shot-assassin-thriller/"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-19.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                </figure>
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">
+                    Kill Shot Assassin Thriller
+                  </h2>
+                  <span class="person-name vcard">Saifudin A.</span>
+                  <span class="price"
+                    ><span class="woocommerce-Price-amount amount"
+                      ><bdi
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >&#36;</span
+                        >9.00</bdi
+                      ></span
+                    ></span
+                  >
+                </div></a
+              >
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="https://demo.tokopress.com/bookie/product/kill-shot-assassin-thriller/"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="?add-to-cart=87"
+                    data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                    data-product_id="87"
+                    data-product_sku=""
+                    aria-label="Add &ldquo;Kill Shot Assassin Thriller&rdquo; to your cart"
+                    rel="nofollow"
+                    >Buy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="product type-product post-60 status-publish instock product_cat-drama product_cat-love-story product_tag-money product_tag-novel product_tag-sound has-post-thumbnail shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="https://demo.tokopress.com/bookie/product/mm-train/"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-12.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                </figure>
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">MM Train</h2>
+                  <span class="person-name vcard">Atkia</span>
+                  <span class="price"
+                    ><span class="woocommerce-Price-amount amount"
+                      ><bdi
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >&#36;</span
+                        >35.00</bdi
+                      ></span
+                    ></span
+                  >
+                </div></a
+              >
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="https://demo.tokopress.com/bookie/product/mm-train/"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="?add-to-cart=60"
+                    data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                    data-product_id="60"
+                    data-product_sku=""
+                    aria-label="Add &ldquo;MM Train&rdquo; to your cart"
+                    rel="nofollow"
+                    >Buy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="product type-product post-93 status-publish instock product_cat-culture product_cat-life-style product_tag-culture product_tag-dream product_tag-etnic has-post-thumbnail downloadable shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="https://demo.tokopress.com/bookie/product/the-dead-compendium-volume-3/"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-21.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                </figure>
+
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">
+                    The Dead Compendium Volume 3
+                  </h2>
+                  <span class="person-name vcard">Brian O'Well</span>
+                  <span class="price"
+                    ><span class="woocommerce-Price-amount amount"
+                      ><bdi
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >&#36;</span
+                        >3.00</bdi
+                      ></span
+                    ></span
+                  >
+                </div></a
+              >
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="https://demo.tokopress.com/bookie/product/the-dead-compendium-volume-3/"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="?add-to-cart=93"
+                    data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                    data-product_id="93"
+                    data-product_sku=""
+                    aria-label="Add &ldquo;The Dead Compendium Volume 3&rdquo; to your cart"
+                    rel="nofollow"
+                    >Buy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="product type-product post-19 status-publish last instock product_cat-drama product_cat-inspiration product_tag-culture product_tag-music product_tag-novel has-post-thumbnail shipping-taxable purchasable product-type-simple"
+          >
+            <div class="product-inner">
+              <a
+                href="https://demo.tokopress.com/bookie/product/the-forgotten-garden/"
+                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                ><figure class="product-image-box">
+                  <img
+                    width="250"
+                    height="333"
+                    src="https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02-250x333.jpg"
+                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                    alt=""
+                    loading="lazy"
+                    srcset="
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02-250x333.jpg 250w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02-225x300.jpg 225w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02-600x800.jpg 600w,
+                      https://demo.tokopress.com/bookie/wp-content/uploads/sites/7/2016/06/book-02.jpg         750w
+                    "
+                    sizes="(max-width: 250px) 100vw, 250px"
+                  />
+                </figure>
+                <div class="product-price-box clearfix">
+                  <h2 class="woocommerce-loop-product__title">
+                    The Forgotten Garden
+                  </h2>
+                  <span class="person-name vcard">Sarfaraz</span>
+                  <span class="price"
+                    ><span class="woocommerce-Price-amount amount"
+                      ><bdi
+                        ><span class="woocommerce-Price-currencySymbol"
+                          >&#36;</span
+                        >20.00</bdi
+                      ></span
+                    ></span
+                  >
+                </div>
+              </a>
+              <div class="woo-button-wrapper">
+                <div class="woo-button-border">
+                  <a
+                    href="https://demo.tokopress.com/bookie/product/the-forgotten-garden/"
+                    class="button product-button"
+                    >Detail</a
+                  ><a
+                    href="?add-to-cart=19"
+                    data-quantity="1"
+                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                    data-product_id="19"
+                    data-product_sku=""
+                    aria-label="Add &ldquo;The Forgotten Garden&rdquo; to your cart"
+                    rel="nofollow"
+                    >Buy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
     </div>
   </div>
 </div>
+<!-- </div> -->
 
 {% endblock %}
